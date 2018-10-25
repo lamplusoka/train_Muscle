@@ -14,10 +14,11 @@ API ->> Browser: Send text data
 
 ```mermaid
 graph TD
-Start[起動]--lordd
+Start[起動]--load data-->DB((データーベース))
+
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzMjYwMjA4MiwtMzA4ODgwOTM5LC0xOT
+eyJoaXN0b3J5IjpbLTk3NzcyMjcwNywtMzA4ODgwOTM5LC0xOT
 k5MjM1MTBdfQ==
 -->
