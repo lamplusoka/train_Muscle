@@ -3,8 +3,9 @@
 
 ```mermaid
 sequenceDiagram
-User->> APP: Request to API header
-APP->> User: 200 OK
+User->> APP: $ train 前側
+Note right of APP:初回なので Msg=<br>「頑張りましょう」
+APP->> User: return Msg
 
 ```
 
@@ -20,6 +21,6 @@ IF1-- No --> NG[不正解]
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1Mzg2NzYxOSwtMzA4ODgwOTM5LC0xOT
-k5MjM1MTBdfQ==
+eyJoaXN0b3J5IjpbLTE1MDk0OTA5MzcsLTMwODg4MDkzOSwtMT
+k5OTIzNTEwXX0=
 -->
