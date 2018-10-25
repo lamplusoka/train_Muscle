@@ -1,11 +1,4 @@
-<h1 id="フロー図">フロー図</h1>
-<blockquote>
-<p># フロー図
 
-
-> Written with <a href="[StackEdit](https://stackedit.io/">StackEdit</a>.</p>
-</blockquote>
-<div class="mermaid"><svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-goRoViFf0rx5MLBU" height="100%" width="100%" style="max-width:550px;" viewBox="-50 -10 550 345"><g></g><g><line id="actor149" x1="75" y1="5" x2="75" y2="334" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle;"><tspan x="75" dy="0">Browser</tspan></text></g><g><line id="actor150" x1="275" y1="5" x2="275" y2="334" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="200" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="275" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle;"><tspan x="275" dy="0">API</tspan></text></g><defs><marker id="arrowhead" refX="5" refY="2" markerWidth="6" markerHeight="4" orient="auto"><path d="M 0,0 V 4 L6,2 Z"></path></marker></defs><defs><marker id="crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="16" refY="4"><path fill="black" stroke="#000000" stroke-width="1px" d="M 9,2 V 6 L16,4 Z" style="stroke-dasharray: 0, 0;"></path><path fill="none" stroke="#000000" stroke-width="1px" d="M 0,1 L 6,7 M 6,1 L 0,7" style="stroke-dasharray: 0, 0;"></path></marker></defs><g><text x="175" y="93" class="messageText" style="text-anchor: middle;">Request to API header</text><line x1="75" y1="100" x2="275" y2="100" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></line></g><g><text x="175" y="128" class="messageText" style="text-anchor: middle;">200 OK</text><line x1="275" y1="135" x2="75" y2="135" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></line></g><g><text x="175" y="163" class="messageText" style="text-anchor: middle;">Request to API data</text><line x1="75" y1="170" x2="275" y2="170" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></line></g><g><rect x="300" y="180" fill="#EDF2AE" stroke="#666" width="150" height="34" rx="0" ry="0" class="note"></rect><text x="296" y="204" fill="black" class="noteText"><tspan x="316" fill="black">Load data from DB</tspan></text></g><g><text x="175" y="242" class="messageText" style="text-anchor: middle;">Send text data</text><line x1="275" y1="249" x2="75" y2="249" class="messageLine0" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" style="fill: none;"></line></g><g><rect x="0" y="269" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="301.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle;"><tspan x="75" dy="0">Browser</tspan></text></g><g><rect x="200" y="269" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="275" y="301.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle;"><tspan x="275" dy="0">API</tspan></text></g></svg></div>).
 
 ```mermaid
 sequenceDiagram
@@ -17,5 +10,5 @@ API ->> Browser: Send text data
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTkyMzUxMF19
+eyJoaXN0b3J5IjpbLTE4NTIxMzMwMDAsLTE5OTkyMzUxMF19
 -->
