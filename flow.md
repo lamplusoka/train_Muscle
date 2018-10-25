@@ -3,7 +3,7 @@
 
 ```mermaid
 sequenceDiagram
-User->> APP: $ train 前側
+User->> APP: $ train 前側 日付
 APP ->> DB: check User data
 Note right of DB: FlowA
 Note right of DB:User情報から<br>データ検索=なし
@@ -44,6 +44,7 @@ NG --> End
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Mjc0MjY0MDMsMTUzNzYzMDYzNiwtNz
-I2NDU5NjA1LC0zMDg4ODA5MzksLTE5OTkyMzUxMF19
+eyJoaXN0b3J5IjpbNjI0MjI5NjkyLC0xNzI3NDI2NDAzLDE1Mz
+c2MzA2MzYsLTcyNjQ1OTYwNSwtMzA4ODgwOTM5LC0xOTk5MjM1
+MTBdfQ==
 -->
