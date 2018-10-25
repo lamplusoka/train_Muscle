@@ -27,7 +27,9 @@ APP -->>User: Status=Exit
 
 ```mermaid
 graph TD
-Start[FlowA 体重判定] -- input data --> IF2{
+Start[FlowA 体重判定] -- input data --> LoadData{Load Data}
+LoadData -- Request DB --> DB((DB))
+LoadData --> DB
 DB((データーベース))
 DB --> IF1{日付がN以上?}
 IF1-- Yes --> OK[正解]
@@ -35,6 +37,6 @@ IF1-- No --> NG[不正解]
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NzMwOTc4OSwtNzI2NDU5NjA1LC0zMD
-g4ODA5MzksLTE5OTkyMzUxMF19
+eyJoaXN0b3J5IjpbLTEzNTYzMTczODQsLTcyNjQ1OTYwNSwtMz
+A4ODgwOTM5LC0xOTk5MjM1MTBdfQ==
 -->
