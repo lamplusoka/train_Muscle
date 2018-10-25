@@ -3,11 +3,9 @@
 
 ```mermaid
 sequenceDiagram
-Browser ->> API: Request to API header
-API ->> Browser: 200 OK
-Browser ->> API: Request to API data
-Note right of API:Load data from DB
-API ->> Browser: Send text data
+User->> APP: Request to API header
+APP->> User: 200 OK
+
 ```
 
 ## フロー図
@@ -16,12 +14,12 @@ API ->> Browser: Send text data
 graph TD
 Start[起動] -- load data -->DB((データーベース))
 A[ユーザーA] -- 割り込み --> DB
-DB --> Engine{IF 判断処理}
-Engine -- Yes --> OK[正解]
-Engine -- No --> NG[不正解]
+DB --> IF1{日付がN以上?}
+IF1-- Yes --> OK[正解]
+IF1-- No --> NG[不正解]
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMDk1Mzg5OCwtMzA4ODgwOTM5LC0xOT
+eyJoaXN0b3J5IjpbMTQ1Mzg2NzYxOSwtMzA4ODgwOTM5LC0xOT
 k5MjM1MTBdfQ==
 -->
