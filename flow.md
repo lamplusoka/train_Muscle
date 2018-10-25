@@ -6,7 +6,8 @@ sequenceDiagram
 User->> APP: $ train 前側
 Note right of APP:初回なので Msg=<br>「頑張りましょう」
 APP->> User: return Msg
-APP-->User: アプリケーション終了
+Note right of APP: Exit=0
+APP-->>User: Status
 ```
 
 ## フロー図
@@ -21,6 +22,6 @@ IF1-- No --> NG[不正解]
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ4MDI5OTQsLTMwODg4MDkzOSwtMTk5OT
-IzNTEwXX0=
+eyJoaXN0b3J5IjpbLTE1OTQ4Mzk0NjYsLTMwODg4MDkzOSwtMT
+k5OTIzNTEwXX0=
 -->
