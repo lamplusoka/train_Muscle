@@ -13,9 +13,10 @@ API ->> Browser: Send text data
 ## フロー図
 
 ```mermaid
-sequenceDiagram
+graph TD
+
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyNDUxMjk1NSwtMTk5OTIzNTEwXX0=
+eyJoaXN0b3J5IjpbLTMwODg4MDkzOSwtMTk5OTIzNTEwXX0=
 -->
