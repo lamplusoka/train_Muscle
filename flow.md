@@ -5,7 +5,7 @@
 sequenceDiagram
 User->> APP: $ train 前側
 APP ->> DB: check User data
-Note right of DB: F
+Note right of DB: FlowA
 Note right of DB:User情報から<br>データ検索=なし
 Note right of DB:DBの新規作成<br>前側を保存
 DB ->> APP: No data
@@ -27,14 +27,13 @@ APP -->>User: Status=Exit
 
 ```mermaid
 graph TD
-Start[起動] -- load data -->DB((データーベース))
-A[ユーザーA] -- 割り込み --> DB
+Start[FlowA] -- load data -->DB((データーベース))
 DB --> IF1{日付がN以上?}
 IF1-- Yes --> OK[正解]
 IF1-- No --> NG[不正解]
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzMxMzA5NjcyLC0zMDg4ODA5MzksLTE5OT
-kyMzUxMF19
+eyJoaXN0b3J5IjpbLTcyNjQ1OTYwNSwtMzA4ODgwOTM5LC0xOT
+k5MjM1MTBdfQ==
 -->
