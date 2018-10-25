@@ -4,7 +4,10 @@
 ```mermaid
 sequenceDiagram
 User->> APP: $ train 前側
-APP ->> DB: DB 確認
+APP ->> DB: check User data
+Note right of DB:User情報から<br>データ検索=なし
+Note right of DB:User
+DB ->> APP: No data
 Note right of APP:初回なので Msg=<br>「頑張りましょう」
 APP ->> User: return Msg
 Note right of APP: Exit(0) 正常終了
@@ -27,6 +30,6 @@ IF1-- No --> NG[不正解]
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA4NzQ2MTg1LC0zMDg4ODA5MzksLTE5OT
-kyMzUxMF19
+eyJoaXN0b3J5IjpbLTcxNTc0MjU1NCwtMzA4ODgwOTM5LC0xOT
+k5MjM1MTBdfQ==
 -->
