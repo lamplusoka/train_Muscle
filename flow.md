@@ -16,11 +16,12 @@ API ->> Browser: Send text data
 graph TD
 Start[起動] -- load data -->DB((データーベース))
 A[ユーザーA] -- 割り込み --> DB
-DB --> Engine{エンジン}
-Engine -- 
+DB --> Engine{IF 判断処理}
+Engine -- Yes --> OK[正解]
+Engine -- No --> NG[不正解]
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDMzNTU4NjAsLTMwODg4MDkzOSwtMT
-k5OTIzNTEwXX0=
+eyJoaXN0b3J5IjpbLTgxMDk1Mzg5OCwtMzA4ODgwOTM5LC0xOT
+k5MjM1MTBdfQ==
 -->
