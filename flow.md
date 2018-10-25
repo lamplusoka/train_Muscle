@@ -14,9 +14,10 @@ API ->> Browser: Send text data
 
 ```mermaid
 graph TD
-
+Start[起動]--lordd
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwODg4MDkzOSwtMTk5OTIzNTEwXX0=
+eyJoaXN0b3J5IjpbLTkzMjYwMjA4MiwtMzA4ODgwOTM5LC0xOT
+k5MjM1MTBdfQ==
 -->
