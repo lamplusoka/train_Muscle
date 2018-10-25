@@ -25,6 +25,10 @@ APP -->>User: Status=Exit
 
 ## フロー図
 
+// 引数を確認
+// 引数を表示
+// 終了
+
 def sample( user_data ) のフロー図
 
 ```mermaid
@@ -39,6 +43,6 @@ NG --> End
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNzYzMDYzNiwtNzI2NDU5NjA1LC0zMD
-g4ODA5MzksLTE5OTkyMzUxMF19
+eyJoaXN0b3J5IjpbMjEwODExNTU3OSwxNTM3NjMwNjM2LC03Mj
+Y0NTk2MDUsLTMwODg4MDkzOSwtMTk5OTIzNTEwXX0=
 -->
