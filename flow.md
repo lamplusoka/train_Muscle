@@ -25,6 +25,7 @@ APP -->>User: Status=Exit
 
 ## フロー図
 
+Compare( old_data )
 ```mermaid
 graph TD
 Start[FlowA 体重判定] -- input user data --> LoadData{Load Data}
@@ -32,9 +33,11 @@ DB((DB)) -- Request old data --> LoadData
 LoadData -- Current and old data --> IF1{Is old > current?}
 IF1-- Yes --> OK[正解]
 IF1-- No --> NG[不正解]
+OK --> End[戻り値]
+NG --> End
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMzNTkzNDEsLTcyNjQ1OTYwNSwtMzA4OD
-gwOTM5LC0xOTk5MjM1MTBdfQ==
+eyJoaXN0b3J5IjpbMTgzOTA2MjcwMSwtNzI2NDU5NjA1LC0zMD
+g4ODA5MzksLTE5OTkyMzUxMF19
 -->
