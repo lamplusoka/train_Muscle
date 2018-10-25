@@ -29,9 +29,9 @@ def sample( user_data ) のフロー図
 
 ```mermaid
 graph TD
-Start[input user data] -- user_data --> LoadData{Load Data}
-DB((DB)) -- Request old data --> LoadData
-LoadData -- Current and old data --> IF1{Is old > current?}
+Start[input user data] -- user_data --> LoadData{Get old data<br>and mix}
+DB((DB)) -- Request old_data --> LoadData
+LoadData -- user_data and old_data --> IF1{Is old > current?}
 IF1-- Yes --> OK[正解]
 IF1-- No --> NG[不正解]
 OK --> End[戻り値]
@@ -39,6 +39,6 @@ NG --> End
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MTAwODI1NSwtNzI2NDU5NjA1LC0zMD
+eyJoaXN0b3J5IjpbMTUzNzYzMDYzNiwtNzI2NDU5NjA1LC0zMD
 g4ODA5MzksLTE5OTkyMzUxMF19
 -->
