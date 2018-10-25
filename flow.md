@@ -25,6 +25,7 @@ APP -->>User: Status=Exit
 
 ## フロー図
 
+引数を返す（表示するだけのもの）
 // 引数を確認
 // 引数を表示
 // 終了
@@ -43,6 +44,6 @@ NG --> End
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwODExNTU3OSwxNTM3NjMwNjM2LC03Mj
-Y0NTk2MDUsLTMwODg4MDkzOSwtMTk5OTIzNTEwXX0=
+eyJoaXN0b3J5IjpbLTE3Mjc0MjY0MDMsMTUzNzYzMDYzNiwtNz
+I2NDU5NjA1LC0zMDg4ODA5MzksLTE5OTkyMzUxMF19
 -->
