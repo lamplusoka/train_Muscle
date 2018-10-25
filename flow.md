@@ -13,7 +13,9 @@ APP ->> User: return Msg
 Note right of APP: Exit(0) 正常終了
 APP -->>User: Status=Exit
 User ->> APP: $ train 下半身
-APP ->>
+APP ->> DB: check User data
+Note right of DB:User情報から<br>データ検索=あり
+DB ->> APP: 外側
 Note right of APP:２回目なので Msg=<br>「明日は後側」
 APP -->> User: return Msg
 
@@ -31,6 +33,6 @@ IF1-- No --> NG[不正解]
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2MTUwNDQ0OCwtMzA4ODgwOTM5LC0xOT
+eyJoaXN0b3J5IjpbLTY5NTI1MzA5NiwtMzA4ODgwOTM5LC0xOT
 k5MjM1MTBdfQ==
 -->
