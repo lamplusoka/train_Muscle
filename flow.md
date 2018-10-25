@@ -29,14 +29,12 @@ APP -->>User: Status=Exit
 graph TD
 Start[FlowA 体重判定] -- input user data --> LoadData{Load Data}
 DB((DB)) -- Request old data --> LoadData
-LoadData --> DB2
-DB2((データーベース))
-DB2 --> IF1{日付がN以上?}
+LoadData -- Current and old data --> IF1{Is old > current?}
 IF1-- Yes --> OK[正解]
 IF1-- No --> NG[不正解]
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1Mjk3MDY5MCwtNzI2NDU5NjA1LC0zMD
-g4ODA5MzksLTE5OTkyMzUxMF19
+eyJoaXN0b3J5IjpbNTMzNTkzNDEsLTcyNjQ1OTYwNSwtMzA4OD
+gwOTM5LC0xOTk5MjM1MTBdfQ==
 -->
