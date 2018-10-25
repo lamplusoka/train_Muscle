@@ -1,4 +1,5 @@
 
+## シーケンシャル図
 
 ```mermaid
 sequenceDiagram
@@ -9,6 +10,12 @@ Note right of API:Load data from DB
 API ->> Browser: Send text data
 ```
 
+## フロー図
+
+```mermaid
+sequenceDiagram
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTIxMzMwMDAsLTE5OTkyMzUxMF19
+eyJoaXN0b3J5IjpbLTcyNDUxMjk1NSwtMTk5OTIzNTEwXX0=
 -->
