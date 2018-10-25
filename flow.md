@@ -25,7 +25,6 @@ APP -->>User: Status=Exit
 
 ## フロー図
 
-Compare( old_data )
 ```mermaid
 graph TD
 Start[FlowA 体重判定] -- input user data --> LoadData{Load Data}
@@ -38,6 +37,6 @@ NG --> End
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzOTA2MjcwMSwtNzI2NDU5NjA1LC0zMD
-g4ODA5MzksLTE5OTkyMzUxMF19
+eyJoaXN0b3J5IjpbLTE5NDAyNDc4MDEsLTcyNjQ1OTYwNSwtMz
+A4ODgwOTM5LC0xOTk5MjM1MTBdfQ==
 -->
