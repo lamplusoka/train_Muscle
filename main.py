@@ -27,8 +27,7 @@ if os.path.exists(path_file_json) == False:
     isCommitInitial = True
 
 
-# ファイルが存在するか確認。なければ作成
-
+# 保存データ内の日付より前の日付が入力された場合、メッセージを出す
 # ファイルが空の場合は、ダミーのデータを保存 or 読み込みせず data_json にダミーを与える
 
 # 保存データの読み込み
