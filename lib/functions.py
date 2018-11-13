@@ -2,6 +2,9 @@ import sys
 import datetime
 import json #前回ファイルの読み込み
 
+name_muscle_part = ['前側', '下半身', '後側']
+len_name_muscle_part = len(name_muscle_part)
+
 # ---------------------------------------------------------------------------
 #  Functions
 # ---------------------------------------------------------------------------
@@ -9,22 +12,17 @@ def create_json_if_not_exist(args):
     make_file_json(args[0], args[1])
     print('初めてのご利用ありがとうございます！筋トレライフ、張り切っていきましょう！')
 
-def exit_if_invalid_args(name_muscle_part_this_time):
-    if name_muscle_part_this_time >= 3 or name_muscle_part_this_time == -1 :
-        print('1～3の数字をいれてください。')
+def exit_if_invalid_args(name_muscle_part_this_time_num):
+    if name_muscle_part_this_time_num >= len_name_muscle_part:
+        print('1～' + str(len_name_muscle_part) + 'の数字をいれてください。')
         exit()
 
 def get_name_muscle_next(name_muscle_last): #次回部位の特定
-    name_muscle_part = ['前側', '下半身', '後側']
-    if name_muscle_last == name_muscle_part[0]: 
-        return name_muscle_part[1]
-    elif name_muscle_last == name_muscle_part[1]:
-        return name_muscle_part[2]
-    elif name_muscle_last == name_muscle_part[2]:
+    num = name_muscle_part.index(name_muscle_last)
+    if num % len(name_muscle_part) == len_name_muscle_part - 1:
         return name_muscle_part[0]
     else:
-        print('不正な部位です')
-        exit()
+        return name_muscle_part[num + 1]
 
 def get_time_next(time_given_string):
     time_given_datetime = datetime.datetime.strptime(time_given_string, '%Y/%m/%d') #日付文字列をdatetimeへ変換
@@ -42,7 +40,15 @@ def get_weekday(time_given_string):
     time_weekday        = weekday[time_weekday_number] #曜日の値→文字列で曜日へ
     return time_weekday
 
-
+def input_muscle_part(): #標準入力から部位のキーを取得
+    print('どの部位を鍛えましたか？番号を入力してください。')
+    num = 1
+    for part in name_muscle_part:
+        print(str(num) + ':' + part)
+        num += 1
+    name_muscle_part_this_time_num = int(input()) -1
+    exit_if_invalid_args(name_muscle_part_this_time_num)
+    return name_muscle_part[name_muscle_part_this_time_num]
 
 def make_file_json(data_first_muscle, data_first_time):
     data_json      = generate_data_json(data_first_muscle, data_first_time)

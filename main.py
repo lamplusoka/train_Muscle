@@ -8,22 +8,6 @@ import os #jsonファイルの有無を確認
 # ---------------------------------------------------------------------------
 #  settings
 # ---------------------------------------------------------------------------
-name_muscle_part = ['前側', '下半身', '後側']
-
-#標準入力から部位のキーを取得
-name_muscle_part_this_time_num = int(input('どの部位を鍛えましたか？\n\
-1:前側\n\
-2:下半身\n\
-3:後側\n\
-番号を入力してください:'))
-name_muscle_part_this_time = name_muscle_part[name_muscle_part_this_time_num - 1]
-libf.exit_if_invalid_args(name_muscle_part_this_time_num - 1) #
-
-args =[name_muscle_part_this_time] #実施した部位と日付をこのリストに格納
-
-args.append(input('いつ筋トレしましたか？日付を入力してください。\n\
-例）2018/09/09\n\
-'))
 name_file_json  = 'output.json'
 path_file_json  = "./" + name_file_json
 isCommitInitial = False
@@ -31,10 +15,16 @@ isCommitInitial = False
 # ---------------------------------------------------------------------------
 #  main
 # ---------------------------------------------------------------------------
+name_muscle_part_this_time = libf.input_muscle_part() #標準入力で実施部位の入力受付
+args =[name_muscle_part_this_time] #実施した部位と日付をこのリストに格納
 
-time_next = libf.get_time_next(args[1])
+args.append(input('いつ筋トレしましたか？日付を入力してください。\n\
+例）2018/09/09\n\
+'))
 
-if os.path.exists(path_file_json) == False:
+time_next = libf.get_time_next(args[1]) #次回実施日の取得
+
+if os.path.exists(path_file_json) == False: #ファイルがない場合、作成
     libf.create_json_if_not_exist(args)
     isCommitInitial = True
 
