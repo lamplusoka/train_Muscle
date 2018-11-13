@@ -6,21 +6,22 @@ import json #前回ファイルの読み込み
 #  Functions
 # ---------------------------------------------------------------------------
 def create_json_if_not_exist(args):
-    make_file_json(args[1], args[2])
+    make_file_json(args[0], args[1])
     print('初めてのご利用ありがとうございます！筋トレライフ、張り切っていきましょう！')
 
-def exit_if_invalid_args(args):
-    if len(args) < 3 or len(args) >3:
-        print_help()
+def exit_if_invalid_args(name_muscle_part_this_time):
+    if name_muscle_part_this_time >= 3 or name_muscle_part_this_time == -1 :
+        print('1～3の数字をいれてください。')
         exit()
 
 def get_name_muscle_next(name_muscle_last): #次回部位の特定
-    if name_muscle_last == '前側': 
-        return '下半身'
-    elif name_muscle_last == '下半身':
-        return '後側'
-    elif name_muscle_last == '後側':
-        return '前側'
+    name_muscle_part = ['前側', '下半身', '後側']
+    if name_muscle_last == name_muscle_part[0]: 
+        return name_muscle_part[1]
+    elif name_muscle_last == name_muscle_part[1]:
+        return name_muscle_part[2]
+    elif name_muscle_last == name_muscle_part[2]:
+        return name_muscle_part[0]
     else:
         print('不正な部位です')
         exit()
@@ -40,6 +41,8 @@ def get_weekday(time_given_string):
     time_weekday_number = time_given_datetime.weekday() #曜日の値を取得
     time_weekday        = weekday[time_weekday_number] #曜日の値→文字列で曜日へ
     return time_weekday
+
+
 
 def make_file_json(data_first_muscle, data_first_time):
     data_json      = generate_data_json(data_first_muscle, data_first_time)
