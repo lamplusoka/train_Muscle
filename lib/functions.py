@@ -1,6 +1,8 @@
 import sys
 import datetime
 import json #前回ファイルの読み込み
+import linecache
+import ast
 
 name_muscle_part = ['前側', '下半身', '後側']
 len_name_muscle_part = len(name_muscle_part)
@@ -68,13 +70,33 @@ def print_msg_next(date_next, name_muscle):
 
 
 def read_file_json(path_file_json):
-    file_object = open(path_file_json, 'r')
-    return json.load(file_object)
+    #file_object = open(path_file_json, 'r')
+    #return json.load(file_object)
+    #path_file = 'test.txt'
+    get_total_rows_num = sum(1 for i in open(path_file_json)) #テキストデータの行数を取得
+    read_log_last = linecache.getline(path_file_json, get_total_rows_num - 1)
+    change_log_last_to_dict = ast.literal_eval(read_log_last)
+    return change_log_last_to_dict
 
 def generate_data_json(data_first_muscle, data_first_time):
     return {"部位": data_first_muscle, "日付": data_first_time}
 
 def write_file(path_file, data_to_save):
-    file_object = open(path_file, 'w')
-    json.dump(data_to_save, file_object, ensure_ascii=False) #元はfile_object.write(data_to_save)
-    file_object.close
+    #file_object = open(path_file, 'w')
+    #json.dump(data_to_save, file_object, ensure_ascii=False) #元はfile_object.write(data_to_save)
+    #file_object.close
+
+    with open(path_file,'ab+') as f:
+            f.seek(0, 2)
+            if f.tell() == 0:
+                    f.write('[\n'.encode())
+                    f.write(json.dumps(data_to_save,  ensure_ascii=False).encode())
+                    f.write('\n]'.encode())
+            else:
+                    f.seek(-2, 2)
+                    f.truncate()
+                    f.write(',\n'.encode())
+                    f.write(json.dumps(data_to_save,  ensure_ascii=False).encode())
+                    f.write('\n]'.encode())
+                    f.close
+        

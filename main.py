@@ -35,6 +35,7 @@ if os.path.exists(path_file_json) == False: #ファイルがない場合、作�
 # 保存データの読み込み
 data_json = libf.read_file_json(name_file_json)
 
+
 #前回実施日をメッセージ出力
 if not isCommitInitial :
     libf.print_msg_last(data_json['日付'], data_json['部位'])
