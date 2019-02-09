@@ -1,6 +1,7 @@
 import sys
 import datetime
 import json #前回ファイルの読み込み
+import re
 
 name_muscle_part = ['前側', '下半身', '後側']
 len_name_muscle_part = len(name_muscle_part)
@@ -13,8 +14,11 @@ def create_json_if_not_exist(args):
     print('初めてのご利用ありがとうございます！筋トレライフ、張り切っていきましょう！')
 
 def exit_if_invalid_args(name_muscle_part_this_time_num):
-    if name_muscle_part_this_time_num >= len_name_muscle_part:
+    match = re.search('^[1-3]$', str(name_muscle_part_this_time_num)) #１～３の数字が入力されたか確認。リストを増やしたら正規表現も増やすこと
+    if not match:
         print('1～' + str(len_name_muscle_part) + 'の数字をいれてください。')
+        name_muscle_part_this_time_num = ''
+        #input_muscle_part()
         exit()
 
 def get_name_muscle_next(name_muscle_last): #次回部位の特定
@@ -46,9 +50,9 @@ def input_muscle_part(): #標準入力から部位のキーを取得
     for part in name_muscle_part:
         print(str(num) + ':' + part)
         num += 1
-    name_muscle_part_this_time_num = int(input()) -1
+    name_muscle_part_this_time_num = input()
     exit_if_invalid_args(name_muscle_part_this_time_num)
-    return name_muscle_part[name_muscle_part_this_time_num]
+    return name_muscle_part[int(name_muscle_part_this_time_num) - 1]
 
 def make_file_json(data_first_muscle, data_first_time):
     data_json      = generate_data_json(data_first_muscle, data_first_time)
